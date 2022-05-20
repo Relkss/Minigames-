@@ -4,13 +4,18 @@ if Type == "Simulator" then
 	game.StarterGui:SetCore("SendNotification", {
 		Title = "Don't expect for a data_store";
 		Text = "This script doesnt save data!\n so use it when you wanna have fun!";
-		Duration = 5;
+		Duration = 9;
 	})
 	
 	local soundbruh = Instance.new("Sound", workspace)
 	soundbruh.Name = "ohhhYess"
 	soundbruh.SoundId = "rbxassetid://343645346"
 	soundbruh.Volume = 4
+	
+	local kaching = Instance.new("Sound", workspace)
+	kaching.Name = "Kachin!"
+	kaching.SoundId = "rbxassetid://6658761720"
+	kaching.Volume = 2
 	
 	local vibe = Instance.new("Sound", workspace)
 	vibe.Name = "Oofy paradise!"
@@ -24,6 +29,7 @@ if Type == "Simulator" then
 	end
 	loadSound(soundbruh)
 	loadSound(vibe)
+	loadSound(kaching)
 	
 	game.StarterGui:SetCore("SendNotification", {
 		Title = "Loaded!";
@@ -141,7 +147,7 @@ if Type == "Simulator" then
 	BRUH.BackgroundTransparency = 1
 	BRUH.Visible = true
 	BRUH.Size = UDim2.new(1,0,1,36)
-	BRUH.AnchorPoint = Vector2.new(0, 1)
+	
 
 	CashGiver.Name = "CashGiver"
 	CashGiver.Parent = Testing
@@ -439,7 +445,7 @@ if Type == "Simulator" then
 		if Cash.Value >= 1500 then
 			_2xcash.Value = true
 			Cash.Value -= 1500
-			amountToGive.Value += 2
+			amountToGive.Value += 4
 		end
 	end)
 	AmongUs.MouseButton1Click:Connect(function()
@@ -447,14 +453,14 @@ if Type == "Simulator" then
 		if Cash.Value >= 3000 then
 			Cash.Value -= 3000
 			Amongus_worker.Value = true
-			amountToGive.Value += 3
+			amountToGive.Value += 7
 		end
 	end)
 	Floppa.MouseButton1Click:Connect(function()
 		if Flopa.Value == true then return end
 		if Cash.Value >= 6700 then
 			Cash.Value -= 6700
-			amountToGive.Value += 5
+			amountToGive.Value += 10
 			Flopa.Value = true
 		end
 	end)
@@ -462,7 +468,7 @@ if Type == "Simulator" then
 		if Chad.Value == true then return end
 		if Cash.Value >= 130000 then
 			Cash.Value -= 130000
-			amountToGive.Value += 20
+			amountToGive.Value += 50
 			Chad.Value = true
 		end
 	end)
@@ -470,7 +476,7 @@ if Type == "Simulator" then
 		if FatherWithMilk.Value == true then return end
 		if Cash.Value >= 10000000 then
 			Cash.Value -= 10000000
-			amountToGive.Value += 100
+			amountToGive.Value += 390
 		end
 	end)
 	Quandle.MouseButton1Click:Connect(function()
@@ -478,7 +484,7 @@ if Type == "Simulator" then
 		if Cash.Value >= 130000000 then
 			Cash.Value -= 130000000
 			Quandle_Dingle.Value = true
-			amountToGive.Value += 390
+			amountToGive.Value += 790
 		end
 	end)
 	Quandle_2.MouseButton1Click:Connect(function()
@@ -494,15 +500,16 @@ if Type == "Simulator" then
 			BRUH.BackgroundTransparency = 0
 			wait(1)
 			vibe:Play()
-			wait(4)
+			wait(10)
 			setclipboard("https://www.roblox.com/game-pass/29445877/Donation-for-the-man")
 			plr:Kick("Thank you for playing my game made in client!\nif you want me to make more please\nsupport me by buying this gamepass\n(its now copied on you're clipboard!)")
 		end
 	end)
 	AutoClick.Changed:Connect(function(val)
 		if val == true then
-			while wait() do
+			while true do
 				Cash.Value += amountToGive.Value * amountToGive.Value
+				task.wait()
 			end
 		end
 	end)
@@ -511,7 +518,7 @@ else
 	game.StarterGui:SetCore("SendNotification", {
 		Title = "Wrong game pal!";
 		Text = "🤬🤬";
-		Duration = 5;
+		Duration = 9;
 	})
 end
 
