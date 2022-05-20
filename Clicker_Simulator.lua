@@ -436,6 +436,7 @@ if Type == "Simulator" then
 	AutoClicker.MouseButton1Click:Connect(function()
 		if AutoClick.Value == true then return end
 		if Cash.Value >= 430 then
+				kaching:Play()
 			Cash.Value -= 430
 			AutoClick.Value = true
 		end
@@ -443,6 +444,7 @@ if Type == "Simulator" then
 	_2xCash.MouseButton1Click:Connect(function()
 		if _2xcash.Value == true then return end
 		if Cash.Value >= 1500 then
+				kaching:Play()
 			_2xcash.Value = true
 			Cash.Value -= 1500
 			amountToGive.Value += 4
@@ -451,6 +453,7 @@ if Type == "Simulator" then
 	AmongUs.MouseButton1Click:Connect(function()
 		if Amongus_worker.Value == true then return end
 		if Cash.Value >= 3000 then
+				kaching:Play()
 			Cash.Value -= 3000
 			Amongus_worker.Value = true
 			amountToGive.Value += 7
@@ -459,6 +462,7 @@ if Type == "Simulator" then
 	Floppa.MouseButton1Click:Connect(function()
 		if Flopa.Value == true then return end
 		if Cash.Value >= 6700 then
+				kaching:Play()
 			Cash.Value -= 6700
 			amountToGive.Value += 10
 			Flopa.Value = true
@@ -467,6 +471,7 @@ if Type == "Simulator" then
 	Giga.MouseButton1Click:Connect(function()
 		if Chad.Value == true then return end
 		if Cash.Value >= 130000 then
+				kaching:Play()
 			Cash.Value -= 130000
 			amountToGive.Value += 50
 			Chad.Value = true
@@ -475,6 +480,7 @@ if Type == "Simulator" then
 	FatherFigure.MouseButton1Click:Connect(function()
 		if FatherWithMilk.Value == true then return end
 		if Cash.Value >= 10000000 then
+				kaching:Play()
 			Cash.Value -= 10000000
 			amountToGive.Value += 390
 		end
@@ -482,6 +488,7 @@ if Type == "Simulator" then
 	Quandle.MouseButton1Click:Connect(function()
 		if Quandle_Dingle.Value == true then return end
 		if Cash.Value >= 130000000 then
+				kaching:Play()
 			Cash.Value -= 130000000
 			Quandle_Dingle.Value = true
 			amountToGive.Value += 790
